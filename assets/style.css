@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #060630;
+    overflow-x: hidden;
+}
+
+figure{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+img{
+    padding: 0px;
+    margin: 0px;
+    width: 100px;
+}
+
+
+
+
+/* -----------------HEADER---------------- */
+
+
+
+
+
+header{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;  
+    overflow: hidden;
+    position: relative;
+}
+
+.dark-filter{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007a;
+
+}
+
+.decoration{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.points {
+    border-radius: 50%;
+    flex-direction: row;
+    width: 50%;
+    height: 130%;
+    position: absolute;
+    z-index: 2;
+}
+
+.red-point{
+    background-image: radial-gradient(#b60000f5 0%, #060630 70%);
+    left: -250px;
+}
+
+.blue-point{
+    background-image: radial-gradient(#347afce1 0px, #060630 70%);
+    right: -250px;
+}
+
+.header-back-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.bar{
+    width: 15em;
+    height: 1em;
+    background-color: white;
+    border-radius: 10px;
+    filter: opacity(0.1);
+    transform: rotate(-10deg);
+    position: relative;
+    left: -300px;
+    animation: back-animation infinite linear;
+}
+
+.header-content{
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-text{
+    display: flex;
+    flex: 80%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-btn{
+    flex: 20%;
+}
+.header-btn button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #4c00ff;
+    background-color: transparent;
+    background-image: radial-gradient(#6f00ff, #4c00ff);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.1s;
+}
+.header-btn button:hover{
+    background-image: radial-gradient(#8d35ff, #4c00ff);
+}
+.header-btn button:active{
+    transform: scale(0.9);
+}
+.header-content h1{
+    color: white;
+    font-size: 7rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: #792df5 5px 5px, #2d4bf5 -5px -5px;
+    text-align: center;
+    transform: skew(0deg, -10deg);
+    animation: title-animation 5s ease-in-out infinite;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.header-content h1 span{
+    text-shadow: #792df5 1px 1px, #2d4bf5 -1px -1px;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+
+}
+.control{
+    transform: rotate(30deg);
+    margin-right: 20px;
+    filter: drop-shadow(1px 1px 5px #8c00ff);
+    animation: img-movement-control 1s infinite alternate ease-out;
+}
+.keyboard{
+    transform: rotate(-30deg);
+    margin-left: 100px;
+    filter: drop-shadow(1px 1px 5px #8c00ff);
+    animation: img-movement-keyboard 1s infinite alternate ease-out;
+}
+
+@keyframes img-movement-control {
+    from{
+        transform: scale(1) rotate(-30deg);
+    }
+    to{
+        transform: scale(1.2) rotate(-40deg);
+    }
+}
+
+@keyframes img-movement-keyboard {
+    from{
+        transform: scale(1) rotate(30deg);
+    }
+    to{
+        transform: scale(1.2) rotate(40deg);
+    }
+}
+
+@keyframes back-animation {
+    from{
+        transform: translate(0%, 0%) rotate(-10deg);
+    }
+    to{
+        transform: translate(1000%, -3000%) rotate(-10deg);
+    }
+}
+
+
+
+
+
+/* -------------------MAIN------------------- */
+
+
+
+
+
+
+main{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    height: 100%;
+    font-family: Verdana;
+    font-family: "Nunito", sans-serif;
+}
+.main-text{
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+.premios{
+    display: flex;
+    flex-direction: row;
+    
+}
+.troph{
+    width: 20px;
+    margin-left: 20px;
+}
+.form-content{
+    flex: 50%;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main h3,main h1{
+    margin: 0px;
+    padding: 0px;
+}
+form{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #060630;
+    background-color: #030322;
+    border-radius: 20px;
+}
+input, select{
+    margin: 0px;
+    padding: 10px 10px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #2d0080;
+
+}
+label{
+    margin: 0px;
+}
+.Participante{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+    justify-content: space-around;
+}
+form input:invalid{
+    border: 1px solid #ff4c4c;
+}
+
+
+
+
+
+
+/* ----------------------FOOTER--------------------- */
+
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+}
+footer button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #4c00ff;
+    background-color: transparent;
+    background-image: radial-gradient(#6f00ff, #4c00ff);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.1s;
+    flex: 20%;
+}
+footer button:hover{
+    background-image: radial-gradient(#8d35ff, #4c00ff);
+}
+footer button:active{
+    transform: scale(0.9);
+}
+
+.authors{
+    flex: 80%;
+    background-color: #090929;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+
+
