@@ -460,6 +460,9 @@ footer{
     .float-img{
         display: none;
     }
+    form{
+        width: 100%;
+    }
 }
 
 
