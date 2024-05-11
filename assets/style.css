@@ -220,33 +220,49 @@ header{
 
 
 main{
+    display: flex;
+    flex-direction: column;
+}
+.main-sup{
     color: white;
     display: flex;
     flex-direction: row;
     margin: 30px;
     height: 100%;
-    font-family: Verdana;
     font-family: "Nunito", sans-serif;
 }
 .main-text{
-    flex: 50%;
+    flex: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
 }
+.float-img{
+    flex: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.float-img img{
+    width: 40%;
+    /* animation: ani-img-main 2s infinite linear alternate; */
+}
 .premios{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;   
 }
 .troph{
     width: 20px;
     margin-left: 20px;
 }
+.main-sub{
+    width: 100%;
+    color: white;
+    font-family: "Nunito", sans-serif;
+}
 .form-content{
-    flex: 50%;
-    padding: 20px 0px 20px 0px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,34 +272,83 @@ main h3,main h1{
     padding: 0px;
 }
 form{
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 30px;
     border: 1px solid #060630;
     background-color: #030322;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-input, select{
+input{
     margin: 0px;
     padding: 10px 10px;
     background-color: #000000;
     color: white;
     border-radius: 10px;
     border: 1px solid #2d0080;
-
+    width: 100%;
 }
-label{
+main p{
     margin: 0px;
 }
 .Participante{
     display: flex;
     flex-direction: row;
-    margin: 30px 0px;
+    margin: 20px 0px;
     justify-content: space-around;
+    width: 100%;
+}
+.Participante div{
+    width: 100%;
 }
 form input:invalid{
     border: 1px solid #ff4c4c;
 }
+.games{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.games div{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+}
+.games div div{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+input[type="checkbox"]{
+    width: 10px;
+    margin: 5px;
+}
+input[type="checkbox"]:checked{
+    box-shadow: 0px 0px 5px 0px #af03ff;
+}
+.games label{
+    margin: 0px;
+    padding: 0px;
+}
+.invalid{
+    border: 1px solid #ff4c4c;
+}
 
+
+@keyframes ani-img-main {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
 
 
 
@@ -305,7 +370,7 @@ footer{
     flex-direction: column;
     margin: 0px;
 }
-footer button{
+.submit-btn{
     padding: 15px 30px;
     border-radius: 20px;
     font-size: 1rem;
@@ -316,26 +381,88 @@ footer button{
     font-weight: bold;
     letter-spacing: 1px;
     transition: 0.1s;
-    flex: 20%;
+    margin: 30px;
 }
-footer button:hover{
+.submit-btn:hover{
     background-image: radial-gradient(#8d35ff, #4c00ff);
 }
-footer button:active{
+.submit-btn:active{
     transform: scale(0.9);
 }
 
 .authors{
-    flex: 80%;
     background-color: #090929;
     width: 100%;
-    height: 100px;
+    height: 100%;
     color: white;
     font-family: "Nunito", sans-serif;
     display: flex;
     align-items: center;
     padding: 20px;
 }
+
+
+
+
+
+
+
+/* -----------------------WARNING----------------------- */
+
+
+
+
+
+
+
+
+.warning{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px;
+    background-color: #ff4949de;
+    width: 100%;
+    color: white;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito";
+}
+.warning p{
+    margin: 0px;
+    padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .header-text{
+        flex-direction: column;
+    }
+    .control{
+        margin: 0px;
+    }
+    .keyboard{
+        margin: 50px 0px 0px 0px;
+    }
+    .header-content h1{
+        font-size: 3rem;
+    }
+    .float-img{
+        display: none;
+    }
+}
+
+
 
 
 

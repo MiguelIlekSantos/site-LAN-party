@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LAN party</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 </figure>
                 <h1>LAN<br>Party<br><span>30 de maio</span></h1>
                 <figure>
-                    <img class="keyboard" src="assets/imgs/teclado-de-computador.png" alt="Controle de video game">
+                    <img class="keyboard" src="assets/imgs/teclado-de-computador.png" alt="Imagem Controle de video game">
                 </figure>
             </div>
             <div class="header-btn">
@@ -29,201 +29,101 @@
         </div>
         <div class="header-back-animation" id="header-back-animation"></div>
     </header>
+
     <main id="main">
-        <div class="main-text">
-            <h1>Preencha as informações da sua equipa!</h1>
-            <h3>Basta escrever seu nome COMPLETO, ano de ensino e turma.</h3>
-            <p>Condições de participação : </p>
-            <ul>
-                <li>São necessárias 5 pessoas por grupo</li>
-                <li>A mesma pessoa pode participar de vários grupos</li>
-                <li>Se uma pessoa não estiver presente no dia, o grupo tem de encontrar um substituto até o horário de jogo ou então serão desclassificados</li>
-            </ul>
-            <p class="premios">Prêmios<img class="troph" src="assets/imgs/premio.png" alt="Prêmio"></p>
-            <ul>
-                <li>1º Lugar : Premio 1</li>
-                <li>2º Lugar : Premio 2</li>
-                <li>3º Lugar : Premio 3</li>
-            </ul>
+        <div class="main-sup">
+            <div class="main-text">
+                <h1>Preencha as informações da sua equipe!</h1>
+                <h3>Basta escrever os e-mails escolares dos integrantes, ano de ensino, turma e torneios em que pretendem participar.</h3>
+                <br>
+                <p>Condições de participação:</p>
+                <ul>
+                    <li>São necessárias 5 pessoas por grupo</li>
+                    <li>A mesma pessoa pode participar de vários grupos</li>
+                    <li>Se uma pessoa não estiver presente no dia, o grupo tem que encontrar um substituto até o horário de jogo ou então serão desclassificados</li>
+                </ul>
+                <p class="premios">Prêmios<img class="troph" src="assets/imgs/premio.png" alt="Imagem Prêmio"></p>
+                <ul>
+                    <li>1º Lugar: Prêmio 1</li>
+                    <li>2º Lugar: Prêmio 2</li>
+                    <li>3º Lugar: Prêmio 3</li>
+                </ul>
+            </div>
+            <div class="float-img">    
+                <img src="assets/imgs/computador-de-mesa.png" alt="Imagem Computador">
+            </div>
         </div>
-        <div class="form-content">
-            <form action="">
-                <div class="Participante">
-                    <div>
-                        <label for="Nome1">Nome participante 1 :</label><br>
-                        <input type="text" id="Nome1" placeholder="Digite seu nome" maxlength="50" minlength="10">
+        <div class="main-sub">
+            <div class="form-content">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="10acf3b9-bdb5-4f78-956a-e15889557349">
+                    <input type="hidden" name="from_name" value="Novo grupo">
+
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome1">E-mail escolar participante 1:</p><br>
+                            <input type="email" id="email1" required name="Nome1" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                        </div>
                     </div>
-                    <div>
-                        <label for="Ano1">Ano de ensino:</label><br>
-                        <select name="Ano1">
-                            <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
-                            <option value="opção1">6º</option>
-                            <option value="opção2">7º</option>
-                            <option value="opção3">8º</option>
-                            <option value="opção4">9º</option>
-                            <option value="opção4">10º</option>
-                            <option value="opção4">11º</option>
-                            <option value="opção4">12º</option>
-                        </select>
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome2">E-mail escolar participante 2:</p><br>
+                            <input type="email" id="email2" required name="Nome2" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                        </div>
                     </div>
-                    <div>
-                        <label for="Turma1">Turma :</label><br>
-                        <select name="Turma1">
-                            <option value="opção0" selected disabled>Escolha sua turma</option>
-                            <option value="opção1">A</option>
-                            <option value="opção2">B</option>
-                            <option value="opção3">C</option>
-                            <option value="opção4">D</option>
-                            <option value="opção4">E</option>
-                            <option value="opção4">F</option>
-                            <option value="opção4">G</option>
-                            <option value="opção4">H</option>
-                        </select>
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome3">E-mail escolar participante 3:</p><br>
+                            <input type="email" id="email3" required name="Nome3" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                        </div>    
                     </div>
-                </div>
-                <div class="Participante">
-                    <div>
-                        <label for="Nome2">Nome participante 2 :</label><br>
-                        <input type="text" id="Nome2" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome4">E-mail escolar participante 4:</p><br>
+                            <input type="email" id="email4" required name="Nome4" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                        </div>
                     </div>
-                    <div>
-                        <label for="Ano2">Ano de ensino:</label><br>
-                        <select name="Ano2">
-                            <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
-                            <option value="opção1">6º</option>
-                            <option value="opção2">7º</option>
-                            <option value="opção3">8º</option>
-                            <option value="opção4">9º</option>
-                            <option value="opção4">10º</option>
-                            <option value="opção4">11º</option>
-                            <option value="opção4">12º</option>
-                        </select>
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome5">E-mail escolar participante 5:</p><br>
+                            <input type="email" id="email5" required name="Nome5" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                        </div>
                     </div>
-                    <div>
-                        <label for="Turma2">Turma :</label><br>
-                        <select name="Turma2">
-                            <option value="opção0" selected disabled>Escolha sua turma</option>
-                            <option value="opção1">A</option>
-                            <option value="opção2">B</option>
-                            <option value="opção3">C</option>
-                            <option value="opção4">D</option>
-                            <option value="opção4">E</option>
-                            <option value="opção4">F</option>
-                            <option value="opção4">G</option>
-                            <option value="opção4">H</option>
-                        </select>
+                    
+                    <br>
+
+                    <div class="games">
+                        <p>Torneios de Jogos:</p>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="op1" value="CS:GO" id="op1">
+                                <label for="op1">CS:GO</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="op2" value="Team-Fortress" id="op2">
+                                <label for="op2">Team Fortress</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="op3" value="Outro jogo" id="op3">
+                                <label for="op3">Outro jogo</label>
+                            </div>
+                        </div>
+                        <button id="submit-btn" class="submit-btn" type="submit">Enviar</button>
                     </div>
-                </div>
-                <div class="Participante">
-                    <div>
-                        <label for="Nome3">Nome participante 3 :</label><br>
-                        <input type="text" id="Nome3" placeholder="Digite seu nome" maxlength="50" minlength="10">
-                    </div>
-                    <div>
-                        <label for="Ano3">Ano de ensino:</label><br>
-                        <select name="Ano3">
-                            <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
-                            <option value="opção1">6º</option>
-                            <option value="opção2">7º</option>
-                            <option value="opção3">8º</option>
-                            <option value="opção4">9º</option>
-                            <option value="opção4">10º</option>
-                            <option value="opção4">11º</option>
-                            <option value="opção4">12º</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="Turma3">Turma :</label><br>
-                        <select name="Turma3">
-                            <option value="opção0" selected disabled>Escolha sua turma</option>
-                            <option value="opção1">A</option>
-                            <option value="opção2">B</option>
-                            <option value="opção3">C</option>
-                            <option value="opção4">D</option>
-                            <option value="opção4">E</option>
-                            <option value="opção4">F</option>
-                            <option value="opção4">G</option>
-                            <option value="opção4">H</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="Participante">
-                    <div>
-                        <label for="Nome4">Nome participante 4 :</label><br>
-                        <input type="text" id="Nome4" placeholder="Digite seu nome" maxlength="50" minlength="10">
-                    </div>
-                    <div>
-                        <label for="Ano4">Ano de ensino:</label><br>
-                        <select name="Ano4">
-                            <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
-                            <option value="opção1">6º</option>
-                            <option value="opção2">7º</option>
-                            <option value="opção3">8º</option>
-                            <option value="opção4">9º</option>
-                            <option value="opção4">10º</option>
-                            <option value="opção4">11º</option>
-                            <option value="opção4">12º</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="Turma4">Turma :</label><br>
-                        <select name="Turma4">
-                            <option value="opção0" selected disabled>Escolha sua turma</option>
-                            <option value="opção1">A</option>
-                            <option value="opção2">B</option>
-                            <option value="opção3">C</option>
-                            <option value="opção4">D</option>
-                            <option value="opção4">E</option>
-                            <option value="opção4">F</option>
-                            <option value="opção4">G</option>
-                            <option value="opção4">H</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="Participante">
-                    <div>
-                        <label for="Nome5">Nome participante 5 :</label><br>
-                        <input type="text" id="Nome5" placeholder="Digite seu nome" maxlength="50" minlength="10">
-                    </div>
-                    <div>
-                        <label for="Ano5">Ano de ensino:</label><br>
-                        <select name="Ano5">
-                            <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
-                            <option value="opção1">6º</option>
-                            <option value="opção2">7º</option>
-                            <option value="opção3">8º</option>
-                            <option value="opção4">9º</option>
-                            <option value="opção4">10º</option>
-                            <option value="opção4">11º</option>
-                            <option value="opção4">12º</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="Turma5">Turma :</label><br>
-                        <select name="Turma5">
-                            <option value="opção0" selected disabled>Escolha sua turma</option>
-                            <option value="opção1">A</option>
-                            <option value="opção2">B</option>
-                            <option value="opção3">C</option>
-                            <option value="opção4">D</option>
-                            <option value="opção4">E</option>
-                            <option value="opção4">F</option>
-                            <option value="opção4">G</option>
-                            <option value="opção4">H</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </main>
+
     <footer>
-        <button>Enviar</button>
         <br>
         <div class="authors">
             <p>Realizado pelo 11º ano do curso de tecnologia de 2023/2024</p>
         </div>
     </footer>
-    
+    <div class="warning">
+        <p>As inscrições estão abertas até dia 24 de maio, não perca tempo e faça já sua inscrição!</p>
+    </div>
 
     <script src="assets/index.js"></script>
 </body>
