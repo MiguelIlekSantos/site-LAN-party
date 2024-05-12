@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAN party</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/png" href="assets/imgs/computador-portatil.png">
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="assets/music/background music.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
     <header>        
         <div class="header-content">
             <div class="header-text">
@@ -34,7 +39,7 @@
         <div class="main-sup">
             <div class="main-text">
                 <h1>Preencha as informações da sua equipe!</h1>
-                <h3>Basta escrever os e-mails escolares dos integrantes, ano de ensino, turma e torneios em que pretendem participar.</h3>
+                <h3>Basta escrever os e-mails dos integrantes, ano de ensino, turma e torneios em que pretendem participar.</h3>
                 <br>
                 <p>Condições de participação:</p>
                 <ul>
@@ -58,42 +63,46 @@
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
                     <input type="hidden" name="access_key" value="10acf3b9-bdb5-4f78-956a-e15889557349">
                     <input type="hidden" name="from_name" value="Novo grupo">
-
+                    
+                    <div class="Participante">
+                        <p for="NomeGrupo">Nome da equipe :</p><br>
+                        <input type="text" id="teamName" required name="NomeGrupo" placeholder="Digite o nome da equipe">
+                    </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome1">E-mail escolar participante 1:</p><br>
-                            <input type="email" id="email1" required name="Nome1" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                            <p for="Nome1">E-mail participante 1:</p><br>
+                            <input type="email" id="email1" required name="Nome1" placeholder="Digite seu nome">
                         </div>
                     </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome2">E-mail escolar participante 2:</p><br>
-                            <input type="email" id="email2" required name="Nome2" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                            <p for="Nome2">E-mail participante 2:</p><br>
+                            <input type="email" id="email2" required name="Nome2" placeholder="Digite seu nome">
                         </div>
                     </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome3">E-mail escolar participante 3:</p><br>
-                            <input type="email" id="email3" required name="Nome3" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                            <p for="Nome3">E-mail participante 3:</p><br>
+                            <input type="email" id="email3" required name="Nome3" placeholder="Digite seu nome">
                         </div>    
                     </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome4">E-mail escolar participante 4:</p><br>
-                            <input type="email" id="email4" required name="Nome4" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                            <p for="Nome4">E-mail participante 4:</p><br>
+                            <input type="email" id="email4" required name="Nome4" placeholder="Digite seu nome">
                         </div>
                     </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome5">E-mail escolar participante 5:</p><br>
-                            <input type="email" id="email5" required name="Nome5" placeholder="Digite seu nome" maxlength="50" minlength="10">
+                            <p for="Nome5">E-mail participante 5:</p><br>
+                            <input type="email" id="email5" required name="Nome5" placeholder="Digite seu nome">
                         </div>
                     </div>
                     
                     <br>
 
                     <div class="games">
-                        <p>Torneios de Jogos:</p>
+                        <p>Selecione os torneios em que pretendem participar:</p>
                         <div>
                             <div>
                                 <input type="checkbox" name="op1" value="CS:GO" id="op1">
@@ -118,7 +127,7 @@
     <footer>
         <br>
         <div class="authors">
-            <p>Realizado pelo 11º ano do curso de tecnologia de 2023/2024</p>
+            <p>Realizado pelo 11º ano do curso de infomática da escola secundária Dr. Joaquim de Carvalho de 2023/2024</p>
         </div>
     </footer>
     <div class="warning">

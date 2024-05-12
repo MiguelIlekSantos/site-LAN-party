@@ -17,10 +17,6 @@ function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-var barPositionsX = []
-var barPositionsY = []
-
 for (let x = 5; x < 50; x++) {
     HBA.innerHTML += `<div class="bar" id="bar-${x}"></div>`
     const bar = document.getElementById(`bar-${x}`)
@@ -53,10 +49,14 @@ for (var i = 0; i < emailInputs.length; i++) {
     (function(i) {
         emailInputs[i].addEventListener('change', function() {
             var email = this.value.trim();
-            var regex = /^[a-zA-Z0-9._%+-]+[0-9]{7}@a\.esjcff\.pt$/;
-            if ((!regex.test(email)) && (email != "")) {
-                alert("Por favor, insira um email válido da escola.");
-            } else if (emails.includes(email)) {
+
+            // ----------------VERIFY SCHOOL EMAIL--------------
+
+            // var regex = /^[a-zA-Z0-9._%+-]+[0-9]{7}@a\.esjcff\.pt$/;
+            // if ((!regex.test(email)) && (email != "")) {
+            //     alert("Por favor, insira um email válido da escola.");
+            // } else
+            if (emails.includes(email)) {
                 alert("Você não pode usar o mesmo email para dois participantes. Por favor, corrija os emails.");
             } else {
                 emails[i] = email;
@@ -83,19 +83,27 @@ function checkInputsValidity() {
     
     for (var i = 0; i < emailInputs.length; i++) {
         var email = emailInputs[i].value.trim();
-        var regex = /^[a-zA-Z0-9._%+-]+[0-9]{7}@a\.esjcff\.pt$/;
-        if (!regex.test(email)) {
+
+        // ----------------VERIFY SCHOOL EMAIL--------------
+        
+        // var regex = /^[a-zA-Z0-9._%+-]+[0-9]{7}@a\.esjcff\.pt$/;
+        // if (!regex.test(email)) {
+        //     emailInputs[i].classList.add('invalid'); 
+        //     isValid = false;
+        // } else {
+        //     emailInputs[i].classList.remove('invalid'); 
+        // }
+        if (email == "") {
             emailInputs[i].classList.add('invalid'); 
             isValid = false;
         } else {
             emailInputs[i].classList.remove('invalid'); 
         }
+
     }
-    if (checkCheckboxSelection()) {
-            
-    } else {
-        isValid = false
-    }
+    if (!checkCheckboxSelection()) {
+        isValid = false      
+    } 
 
     const submitBtn = document.getElementById("submit-btn")
 
