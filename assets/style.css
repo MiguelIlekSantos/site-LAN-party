@@ -156,27 +156,24 @@ header{
     text-shadow: #792df5 5px 5px, #2d4bf5 -5px -5px;
     text-align: center;
     transform: skew(0deg, -10deg);
-    animation: title-animation 5s ease-in-out infinite;
-    margin-bottom: 0px;
+    margin: 0px 50px;
     padding: 0px;
 }
-.header-content h1 span{
+.header-content h1:nth-child(2) {
     text-shadow: #792df5 1px 1px, #2d4bf5 -1px -1px;
     font-size: 1rem;
     margin: 0px;
     padding: 0px;
-    position: absolute;
-
 }
 .control{
     transform: rotate(30deg);
-    margin-right: 20px;
+    /* margin-right: 20px; */
     filter: drop-shadow(1px 1px 5px #8c00ff);
     animation: img-movement-control 1s infinite alternate ease-out;
 }
 .keyboard{
     transform: rotate(-30deg);
-    margin-left: 100px;
+    /* margin-left: 100px; */
     filter: drop-shadow(1px 1px 5px #8c00ff);
     animation: img-movement-keyboard 1s infinite alternate ease-out;
 }
@@ -272,8 +269,8 @@ main h3,main h1{
     padding: 0px;
 }
 form{
-    width: 50%;
-    padding: 30px;
+    width: 70%;
+    padding: 20px;
     border: 1px solid #060630;
     background-color: #030322;
     border-radius: 20px;
@@ -282,14 +279,14 @@ form{
     justify-content: center;
     flex-direction: column;
 }
-input{
+input, select{
     margin: 0px;
     padding: 10px 10px;
     background-color: #000000;
     color: white;
     border-radius: 10px;
     border: 1px solid #2d0080;
-    width: 100%;
+    width: 90%;
 }
 main p{
     margin: 0px;
@@ -302,7 +299,7 @@ main p{
     width: 100%;
 }
 .Participante div{
-    width: 100%;
+    width: 48%;
 }
 form input:invalid{
     border: 1px solid #ff4c4c;
@@ -363,7 +360,7 @@ input[type="checkbox"]:checked{
 
 footer{
     width: 100%;
-    height: 200px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,6 +379,9 @@ footer{
     letter-spacing: 1px;
     transition: 0.1s;
     margin: 30px;
+}
+.submit-btn:disabled{
+    opacity: 0.2;
 }
 .submit-btn:hover{
     background-image: radial-gradient(#8d35ff, #4c00ff);
@@ -449,7 +449,7 @@ footer{
         flex-direction: column;
     }
     .control{
-        margin: 0px;
+        margin: 0px 0px 50px 0px;
     }
     .keyboard{
         margin: 50px 0px 0px 0px;
@@ -462,6 +462,9 @@ footer{
     }
     form{
         width: 100%;
+    }
+    footer{
+        height: 200px;
     }
 }
 

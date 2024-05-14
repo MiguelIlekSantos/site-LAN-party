@@ -8,17 +8,16 @@
     <link rel="icon" type="image/png" href="assets/imgs/computador-portatil.png">
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="assets/music/background music.mp3" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
     <header>        
         <div class="header-content">
             <div class="header-text">
                 <figure>
                     <img class="control" src="assets/imgs/controle-de-video-game.png" alt="Controle de video game">
                 </figure>
-                <h1>LAN<br>Party<br><span>30 de maio</span></h1>
+                <div class="h1">
+                    <h1>LAN<br>Party</h1>
+                    <h1>29 de maio</h1>
+                </div>
                 <figure>
                     <img class="keyboard" src="assets/imgs/teclado-de-computador.png" alt="Imagem Controle de video game">
                 </figure>
@@ -39,12 +38,12 @@
         <div class="main-sup">
             <div class="main-text">
                 <h1>Preencha as informações da sua equipe!</h1>
-                <h3>Basta escrever os e-mails dos integrantes, ano de ensino, turma e torneios em que pretendem participar.</h3>
+                <h3>Basta escrever o e-mail do titular do grupo, nomes dos integrantes, ano de ensino e turma.</h3>
                 <br>
                 <p>Condições de participação:</p>
                 <ul>
-                    <li>São necessárias 5 pessoas por grupo</li>
-                    <li>A mesma pessoa pode participar de vários grupos</li>
+                    <li>São necessárias 5 pessoas por grupo.</li>
+                    <li>A mesma pessoa não pode participar de outros grupos.</li>
                     <li>Se uma pessoa não estiver presente no dia, o grupo tem que encontrar um substituto até o horário de jogo ou então serão desclassificados</li>
                 </ul>
                 <p class="premios">Prêmios<img class="troph" src="assets/imgs/premio.png" alt="Imagem Prêmio"></p>
@@ -65,60 +64,186 @@
                     <input type="hidden" name="from_name" value="Novo grupo">
                     
                     <div class="Participante">
-                        <p for="NomeGrupo">Nome da equipe :</p><br>
+                        <div>
+                            <p for="NomeGrupo">Nome da equipe :</p><br>
                         <input type="text" id="teamName" required name="NomeGrupo" placeholder="Digite o nome da equipe">
-                    </div>
-                    <div class="Participante">
+                        </div>
                         <div>
-                            <p for="Nome1">E-mail participante 1:</p><br>
-                            <input type="email" id="email1" required name="Nome1" placeholder="Digite seu nome">
+                            <p for="Email">E-mail do grupo:</p><br>
+                        <input type="email" id="email" required name="Email" placeholder="Digite seu email">
                         </div>
                     </div>
                     <div class="Participante">
                         <div>
-                            <p for="Nome2">E-mail participante 2:</p><br>
-                            <input type="email" id="email2" required name="Nome2" placeholder="Digite seu nome">
+                            <p for="Nome1">Nome :</p><br>
+                            <input type="text" id="nome1" required name="Nome1" placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <p for="ano">Ano :</p><br>
+                            <select name="ano">
+                                <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
+                                <option value="6ª">6</option>
+                                <option value="7ª">7</option>
+                                <option value="8ª">8</option>
+                                <option value="9ª">9</option>
+                                <option value="10ª">10</option>
+                                <option value="11ª">11</option>
+                                <option value="12ª">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p for="turma">Turma :</p><br>
+                            <select name="turma">
+                                <option value="opção0" selected disabled>Escolha sua turma</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="Participante">
-                        <div>
-                            <p for="Nome3">E-mail participante 3:</p><br>
-                            <input type="email" id="email3" required name="Nome3" placeholder="Digite seu nome">
-                        </div>    
-                    </div>
-                    <div class="Participante">
-                        <div>
-                            <p for="Nome4">E-mail participante 4:</p><br>
-                            <input type="email" id="email4" required name="Nome4" placeholder="Digite seu nome">
-                        </div>
-                    </div>
-                    <div class="Participante">
-                        <div>
-                            <p for="Nome5">E-mail participante 5:</p><br>
-                            <input type="email" id="email5" required name="Nome5" placeholder="Digite seu nome">
-                        </div>
-                    </div>
-                    
-                    <br>
 
-                    <div class="games">
-                        <p>Selecione os torneios em que pretendem participar:</p>
+                    <div class="Participante">
                         <div>
-                            <div>
-                                <input type="checkbox" name="op1" value="CS:GO" id="op1">
-                                <label for="op1">CS:GO</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="op2" value="Team-Fortress" id="op2">
-                                <label for="op2">Team Fortress</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="op3" value="Outro jogo" id="op3">
-                                <label for="op3">Outro jogo</label>
-                            </div>
+                            <p for="Nome1">Nome :</p><br>
+                            <input type="text" id="nome1" required name="Nome1" placeholder="Digite seu nome">
                         </div>
-                        <button id="submit-btn" class="submit-btn" type="submit">Enviar</button>
+                        <div>
+                            <p for="ano">Ano :</p><br>
+                            <select name="ano">
+                                <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
+                                <option value="6ª">6</option>
+                                <option value="7ª">7</option>
+                                <option value="8ª">8</option>
+                                <option value="9ª">9</option>
+                                <option value="10ª">10</option>
+                                <option value="11ª">11</option>
+                                <option value="12ª">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p for="turma">Turma :</p><br>
+                            <select name="turma">
+                                <option value="opção0" selected disabled>Escolha sua turma</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
+                        </div>
                     </div>
+
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome1">Nome :</p><br>
+                            <input type="text" id="nome1" required name="Nome1" placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <p for="ano">Ano :</p><br>
+                            <select name="ano">
+                                <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
+                                <option value="6ª">6</option>
+                                <option value="7ª">7</option>
+                                <option value="8ª">8</option>
+                                <option value="9ª">9</option>
+                                <option value="10ª">10</option>
+                                <option value="11ª">11</option>
+                                <option value="12ª">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p for="turma">Turma :</p><br>
+                            <select name="turma">
+                                <option value="opção0" selected disabled>Escolha sua turma</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome1">Nome :</p><br>
+                            <input type="text" id="nome1" required name="Nome1" placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <p for="ano">Ano :</p><br>
+                            <select name="ano">
+                                <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
+                                <option value="6ª">6</option>
+                                <option value="7ª">7</option>
+                                <option value="8ª">8</option>
+                                <option value="9ª">9</option>
+                                <option value="10ª">10</option>
+                                <option value="11ª">11</option>
+                                <option value="12ª">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p for="turma">Turma :</p><br>
+                            <select name="turma">
+                                <option value="opção0" selected disabled>Escolha sua turma</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="Participante">
+                        <div>
+                            <p for="Nome1">Nome :</p><br>
+                            <input type="text" id="nome1" required name="Nome1" placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <p for="ano">Ano :</p><br>
+                            <select name="ano">
+                                <option value="opção0" selected disabled>Escolha seu ano de ensino</option>
+                                <option value="6ª">6</option>
+                                <option value="7ª">7</option>
+                                <option value="8ª">8</option>
+                                <option value="9ª">9</option>
+                                <option value="10ª">10</option>
+                                <option value="11ª">11</option>
+                                <option value="12ª">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p for="turma">Turma :</p><br>
+                            <select name="turma">
+                                <option value="opção0" selected disabled>Escolha sua turma</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="submit-btn" class="submit-btn" type="submit">Enviar</button>
+                    <br>
                 </form>
             </div>
         </div>
@@ -131,7 +256,7 @@
         </div>
     </footer>
     <div class="warning">
-        <p>As inscrições estão abertas até dia 24 de maio, não perca tempo e faça já sua inscrição!</p>
+        <p>As inscrições estão abertas até dia 26 de maio, não perca tempo e faça já sua inscrição!</p>
     </div>
 
     <script src="assets/index.js"></script>
