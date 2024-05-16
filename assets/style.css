@@ -216,6 +216,11 @@ header{
 
 
 
+.center{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
 main{
     display: flex;
     flex-direction: column;
@@ -370,7 +375,7 @@ footer{
     flex-direction: column;
     margin: 0px;
 }
-.submit-btn{
+main .submit-btn, a{
     padding: 15px 30px;
     border-radius: 20px;
     font-size: 1rem;
@@ -383,13 +388,16 @@ footer{
     transition: 0.1s;
     margin: 30px;
 }
+main a{
+    text-decoration: none;
+}
 .submit-btn:disabled{
     opacity: 0.2;
 }
-.submit-btn:hover{
+main .submit-btn:hover, a{
     background-image: radial-gradient(#8d35ff, #4c00ff);
 }
-.submit-btn:active{
+main .submit-btn:active, a{
     transform: scale(0.9);
 }
 
